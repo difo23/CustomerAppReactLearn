@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from '../../../../../node_modules/react-router-dom';
 
 
-const CustomersListItem = ({name, editAction, delAction, urlPath}) => {
+const CustomersListItem = ({name, editAction, delAction, urlPath, dni}) => {
     return ( 
         <div className = "customer-list-item">
             <div className = "field"><Link to={`${urlPath}${dni}`}>{name}</Link> </div>
@@ -14,6 +14,7 @@ const CustomersListItem = ({name, editAction, delAction, urlPath}) => {
 }
 
 CustomersListItem.propTypes = {
+    dni: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     editAction: PropTypes.string.isRequired,
     delAction: PropTypes.string.isRequired,

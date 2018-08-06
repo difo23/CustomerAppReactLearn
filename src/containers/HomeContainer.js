@@ -10,7 +10,7 @@ class HomeContainer extends Component {
    
     handleOnClick = () => {
         console.log("HandleOn Click")
-        this.props.history.pusch("/customers");
+        this.props.history.push("/customers");
     }
 
     render() {
